@@ -1,0 +1,36 @@
+#contactWidget {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    top: calc(var(--navigation-height) + 28px);
+    width: 100%;
+    height: calc(100% - var(--navigation-height) - 28px);
+    overflow: scroll;
+}
+
+.contactTitle {
+    font-size: calc(18px + 2vmin);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.contactContent {
+    text-decoration: none;
+    color: var(--secondary-color);
+
+    background-color: var(--main-color);
+    border: solid var(--main-color) 2px;
+    border-radius: 10px;
+    box-shadow: 0 0 5px 2px var(--main-color);
+
+    padding: calc(8px + 2vmin);
+
+    font-size: calc(14px + 2vmin);
+
+    cursor: pointer;
+}

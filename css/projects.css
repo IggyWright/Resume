@@ -1,0 +1,163 @@
+#projectsWidget {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    top: calc(var(--navigation-height) + 28px);
+    width: 100%;
+    height: calc(100% - var(--navigation-height) - 28px);
+    overflow: scroll;
+}
+
+.projectContainer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: calc(32px + 2vmin);
+}
+
+.mediaContainer {
+    width: 100%;
+    height: calc(150px + 10vmin);
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    overflow-x: scroll;
+    overflow-y: hidden;
+}
+
+.projectMedia {
+    max-height: 100%;
+    max-width: 35vw;
+    margin: 0 calc(16px + 2vmin);
+}
+
+.projectTitle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: calc(8px + 1vmin) calc(8px + 1vmin) 0 calc(8px + 1vmin);
+    font-size: calc(24px + 2vmin);
+}
+
+.techStackContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.techStack {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: solid var(--third-color) 2px;
+    border-radius: 10px;
+    padding: calc(8px + 1vmin) calc(8px + 1vmin);
+    margin: calc(2px + 1vmin) calc(2px + 1vmin);
+}
+
+.apache {
+    border-color: black;
+}
+.javascript {
+    border-color: yellow;
+}
+.nodejs {
+    border-color: lightgreen;
+}
+.react {
+    border-color: dodgerblue;
+}
+.solidity {
+    border-color: darkgray;
+}
+.unity {
+    border-color: chartreuse;
+}
+.csharp {
+    border-color: violet;
+}
+.googlePlay {
+    border-color: orange;
+}
+.googleAdmob {
+    border-color: orange;
+}
+.imovie {
+    border-color: pink;
+}
+.lightworks {
+    border-color: red;
+}
+.dji {
+    border-color: maroon;
+}
+.python {
+    border-color: greenyellow;
+}
+.sketchApp {
+    border-color: orangered;
+}
+.php {
+    border-color: blueviolet;
+}
+.mysql {
+    border-color: orange;
+}
+.linux {
+    border-color: black;
+}
+.easyeda {
+    border-color: blue;
+}
+.sketchup {
+    border-color: red;
+}
+.anycubic {
+    border-color: deepskyblue;
+}
+
+.techLogo {
+    height: calc(16px + 2vmin);
+    margin-right: calc(4px + 1vmin);
+}
+
+.descriptionContainer {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.bulletContainer {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.bulletPoint {
+    height: calc(4px + 1vmin);
+    width: calc(4px + 1vmin);
+    border-radius: calc(2px + 0.5vmin);
+    border: solid dodgerblue 2px;
+    background-image: linear-gradient(dodgerblue, var(--secondary-color));
+}
+
+.descriptionText {
+    width: 75%;
+    font-size: calc(16px + 1vmin);
+}
+
+/*When our screen is portrait or width is less than 750px we switch widget to mobile prefs*/
+@media all and (orientation: portrait), (max-width: 750px) {
+    .projectMedia {
+        max-width: 50vw;
+    }
+}

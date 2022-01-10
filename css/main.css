@@ -1,0 +1,267 @@
+/*
+    Following will stylize the main View that each View extends
+*/
+@font-face {
+    font-family: Baloo;
+    src: url(/fonts/Baloo/Baloo-Regular.ttf);
+}
+
+:root {
+    --navigation-height: 10vh;
+    --main-color: black;
+    --secondary-color: ghostwhite;
+    --third-color: gainsboro;
+}
+
+html {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Baloo;
+    margin: 0;
+    padding: 0;
+
+    background-color: ghostwhite;
+}
+
+/*
+    Style our navigation
+*/
+#navigation {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: var(--navigation-height);  /* SUbtract 5px to offset 5px box shadow */
+    /* min-height: 35px; */
+    width: 100vw;
+    box-shadow: 0 3px 5px 0px var(--third-color), inset 0 -3px 5px 0px var(--third-color);
+    background-color: var(--main-color);
+    z-index: 2;
+    border-bottom: solid var(--secondary-color) 4px;
+    padding: 10px 0;
+}
+
+/* Style the link container for regular nav menu */
+#navLinks {
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+/* Style all regular navigation containers */
+#navigation ul li {
+    float: left;
+}
+
+/* Style regular navigation link elements */
+#navigation .navCell{
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 2px 10px;
+    margin: 0 10px;
+    font-size: calc(14px + 1vh);
+    border-radius: 5px;
+    border: solid var(--third-color) 2px;
+    color: var(--third-color);
+
+}
+
+#navigation #active.navCell {
+    color: var(--secondary-color);
+    border: solid var(--secondary-color) 2px;
+    box-shadow: 0 0 5px 2px var(--secondary-color);
+}
+
+/* Style the logos nav menu */
+#logo {
+    margin-left: 10px;
+    height: calc(25px + 1vmin);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    font-size: calc(18px + 2vmin);
+    color: var(--secondary-color);
+}
+
+#logo img {
+    height: 75%;
+}
+
+/* Style our dropdownNavigation */
+#dropdownNavigation {
+    position: fixed;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    z-index: 3;
+}
+
+/* Style the dropdown navigation menu main heading*/
+#dropdownNavHeader {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: var(--navigation-height);
+    box-shadow: 0 3px 5px 0px var(--third-color), inset 0 -3px 5px 0px var(--third-color);
+    background-color: var(--main-color);
+    border-bottom: solid ghostwhite 4px;
+    padding-bottom: 5px;
+    z-index: 2;
+    padding: 10px 0;
+}
+
+/* Style the logos dropdown nav menu */
+#dropdownLogo {
+    margin-left: 10px;
+    height: calc(25px + 1vmin);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    font-size: calc(18px + 2vmin);
+    color: var(--secondary-color);
+}
+#dropdownLogo img {
+    height: 75%;
+}
+
+#dropdownNavController {
+    margin-right: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    border-radius: 5px;
+    border: solid var(--secondary-color) 2px;
+    color: var(--secondary-color);
+    box-shadow: 0 0px 5px 2px var(--secondary-color);
+    cursor: pointer;
+}
+
+#dropdownNavButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 5px;
+    font-size: calc(32px + 2vmin);
+}
+
+#dropdownNavText {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 5px 5px 5px;
+    font-size: calc(6px + 1vh);
+}
+
+/* Style dropdown nav links and container */
+#dropdownNavLinks {
+    position: absolute;
+    width: 100vw;
+    height: calc(100vh - var(--navigation-height));
+    top: calc(-100vh + var(--navigation-height));
+    left: 0;
+    display: flex;
+    justify-content: center;
+    /* background-color: rgba(0, 0, 0, 0.25); */
+    z-index: 1;
+    transition: 0.4s ease;
+}
+
+#dropdownNavLinksContainer {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: 0.4s ease;
+    width: 100vw;
+    height: 100%;
+    padding-top: 5px;
+    background-color: ghostwhite;
+    box-shadow: 0 3px 5px 0px gainsboro, inset 0 -3px 5px 0px gainsboro;
+    border: solid ghostwhite;
+    border-width: 0 1px 4px 1px;
+
+}
+
+#dropdownNavLinksContainer ul {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    padding-bottom: 50px;
+}
+
+#dropdownNavLinksContainer ul li {
+    /* height: 10%; */
+}
+
+/* Style the dropdown nav containers */
+#dropdownNavigation .dropdownNavCell {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 90vw;
+    /* height: 10%; */
+    font-size: calc(18px + 1vh);
+    border-radius: 5px;
+    border: solid var(--third-color) 2px;
+    color: var(--main-color);
+    padding: 10px 0;
+    box-shadow: 0 0px 5px 2px var(--third-color);
+}
+
+#dropdownNavLinks #active.dropdownNavCell {
+    box-shadow: 0 0 5px 2px var(--main-color);/*, -3px -3px 10px 0px #2b83e2;*/
+    border: solid var(--main-color) 2px;
+
+}
+
+
+
+
+/*All hover effects when valid */
+@media (hover: hover) {
+    #navigation .navCell:hover:not(#active) {
+        box-shadow: inset 0 0 5px 2px var(--third-color);
+    }
+
+    #dropdownNavController:hover {
+        box-shadow: inset 0 0px 5px 0px var(--third-color);
+    }
+
+
+    #dropdownNavLinks .dropdownNavCell:hover:not(#active) {
+        box-shadow: inset 0 0px 5px 0px var(--third-color);
+    }
+}
+
+
+/*When our screen is portrait or width is less than 750px we switch widget to mobile prefs*/
+@media all and (orientation: portrait), (max-width: 750px) {
+    #navigation {
+        display: none;
+    }
+
+    #dropdownNavigation {
+        display: flex;
+    }
+
+}

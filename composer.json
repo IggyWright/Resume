@@ -1,0 +1,11 @@
+{
+  "autoload": {
+    "psr-4": {"ResumeSite\\": "lib/ResumeSite"}
+  },
+  "config": {
+    "platform-check": false
+  },
+  "require": {
+      "vlucas/phpdotenv": "^5.2"
+  }
+}
