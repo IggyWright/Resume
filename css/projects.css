@@ -140,6 +140,7 @@
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+    margin: calc(8px + 2vmin) 0;
 }
 
 .bulletPoint {
