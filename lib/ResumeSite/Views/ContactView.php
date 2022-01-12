@@ -20,6 +20,9 @@ class ContactView extends View{
                 <div class="contactTitle">Email:
                     <a class="contactContent" href="mailto:iggy.wright81@gmail.com">iggy.wright81@gmail.com</a>
                 </div>
+                <div class="contactTitle">Github:
+                    <a class="contactContent" href="https://github.com/IggyWright">IggyWright</a>
+                </div>
             </div>
 HTML;
 
