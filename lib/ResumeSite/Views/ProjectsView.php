@@ -26,6 +26,7 @@ HTML;
                 "This is my personal consulting website I use to help people build their websites."
             ]
         );
+        
 
         $html .= $this->buildProjectWidget(
             "BillyBlocks",
