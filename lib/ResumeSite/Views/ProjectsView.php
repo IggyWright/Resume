@@ -14,7 +14,18 @@ class ProjectsView extends View{
     public function projectsWidget() {
         $html = <<<HTML
             <div id="projectsWidget">
+                <div id="projectsIntro">Please take a look at all of my personal projects!</div>
 HTML;
+
+        $html .= $this->buildProjectWidget(
+            "BoolAlpha",
+            "https://boolalpha.com",
+            "img/projects/BoolAlpha",
+            ["Consulting", "PHP", "Apache", "React", "Javascript", "Web3", "EVM"],
+            [
+                "This is my personal consulting website I use to help people build their websites."
+            ]
+        );
 
         $html .= $this->buildProjectWidget(
             "BillyBlocks",
@@ -149,7 +160,7 @@ HTML;
             // if (($extension == 'jpg') || ($extension == 'png')) {
                 $html .= '<img class="projectMedia" src="' . $mediaDir . '/' . $file . '"></img>';
             } else if(in_array($extension, ['mp4', 'mov'])) {
-                $html .= '<video controls loop class="projectMedia" autoplay loading="lazy"><source src="' . $mediaDir . '/' . $file . '" type="video/mp4"></video>';
+                $html .= '<video controls muted loop class="projectMedia" autoplay loading="lazy"><source src="' . $mediaDir . '/' . $file . '" type="video/mp4"></video>';
             }
         }
         $html .= '</div>';

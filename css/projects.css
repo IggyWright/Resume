@@ -10,6 +10,11 @@
     overflow: scroll;
 }
 
+#projectsIntro {
+    font-size: calc(24px + 2vmin);
+    margin: calc(16px + 1vmin) 0;
+}
+
 .projectContainer {
     width: 100%;
     display: flex;
