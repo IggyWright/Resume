@@ -130,6 +130,15 @@
 .anycubic {
     border-color: deepskyblue;
 }
+.nextJs {
+    border-color: navy;
+}
+.cadence {
+    border-color: limegreen;
+}
+.arduino {
+    border-color: lightskyblue;
+}
 
 .techLogo {
     height: calc(16px + 2vmin);

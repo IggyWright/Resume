@@ -18,6 +18,29 @@ class ProjectsView extends View{
 HTML;
 
         $html .= $this->buildProjectWidget(
+            "DNAHelicone",
+            "",
+            "img/projects/DNAHelicone",
+            ["Python", "Arduino", "ESP32", "MCU"],
+            [
+                "This is an ongoing project where I got my DNA swabbed through LivingDNA where I was then able to download my raw alleles.",
+                "I then created a motorized helicone as a display!"
+            ]
+        );
+
+        $html .= $this->buildProjectWidget(
+            "OnFlowBank",
+            "https://onflowbank.com",
+            "img/projects/OnFlowBank",
+            ["NextJS", "Cadence", "Apache", "React", "Javascript", "Web3", "Emulators"],
+            [
+                "This project is very similar to BillyBlocks; however it is entirely deployed on the Flow blockchain as opposed to Polygon (Ethereum L2).",
+                "This is intended as an enducational tool to help people build apps on the Flow network using the Cadence programming language.",
+                "Direct link to the Cadence smart contract can be found in the github <a href=\"https://github.com/boolalpha/FlowBank/blob/main/cadence/contracts/FlowBank.cdc\">here.</a>"
+            ]
+        );
+
+        $html .= $this->buildProjectWidget(
             "BoolAlpha",
             "https://boolalpha.com",
             "img/projects/BoolAlpha",
@@ -26,7 +49,7 @@ HTML;
                 "This is my personal consulting website I use to help people build their websites."
             ]
         );
-        
+
 
         $html .= $this->buildProjectWidget(
             "BillyBlocks",
@@ -139,6 +162,8 @@ HTML;
         $html .= '<div class="projectTitle">' . $title;
         if($link != "") {
             $html .= ' - <a href="' . $link . '">' . $link . '</a>';
+        } else {
+            $html .= ' - Website Coming Soon; Please Inquire';
         }
         $html .= '</div>';
 
@@ -243,6 +268,15 @@ HTML;
                 break;
             case 'SketchUp' :
                 return '<div class="techStack sketchup"><img class="techLogo" src="img/projects/logos/sketchupLogo.png"/>' . $tech . '</div>';
+                break;
+            case 'NextJS' :
+                return '<div class="techStack nextJs"><img class="techLogo" src="img/projects/logos/nextLogo.png"/>' . $tech . '</div>';
+                break;
+            case 'Cadence' :
+                return '<div class="techStack cadence"><img class="techLogo" src="img/projects/logos/flowLogo.png"/>' . $tech . '</div>';
+                break;
+            case 'Arduino' :
+                return '<div class="techStack arduino"><img class="techLogo" src="img/projects/logos/arduinoLogo.png"/>' . $tech . '</div>';
                 break;
             default:
                 return '<div class="techStack"><img class="techLogo" src="img/projects/logos/computerLogo.png"/>' . $tech . '</div>';
